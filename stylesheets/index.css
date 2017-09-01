@@ -1,0 +1,37 @@
+section {
+    margin-top: 50px;
+    padding-top: 100px;
+    background-size: cover;
+    transition: background-image 1s;
+    transition-timing-function: ease;
+    height: 767px;
+}
+img {
+    position: relative;
+    width: 430px;
+    transition: width 1s;
+}
+img:hover {
+    width: 50%;
+    animation:shake .1s infinite;
+}
+@keyframes shake {
+    from {transform:rotate(-2deg)}
+    to {transform:rotate(2deg)}
+}
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 150px;
+}
+p {
+    color: white;
+    font-size: 20px;
+}
+.context {
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    opacity: 0;
+}
