@@ -8,11 +8,11 @@ $(function () {
                     opacity: '1'
                 },
                 'slow');
-        }, i * 200);
+        }, i * 1000);
     }
 });
 var bg = 1;
-var bgCount = 3;
+var bgCount = 2;
 $('section').css('background-image', "url('images/b0.jpg')");
 setInterval(function() {
     $('section').css('background-image', "url('images/b" + bg + ".jpg')");

@@ -1,18 +1,18 @@
 section {
-    margin-top: 50px;
-    padding-top: 100px;
+    /* margin-top: -60px; */
     background-size: cover;
     transition: background-image 1s;
     transition-timing-function: ease;
-    height: 767px;
+    height: 100%;
+    overflow:hidden;
 }
 img {
     position: relative;
+    margin-top: 200px;
     width: 430px;
     transition: width 1s;
 }
 img:hover {
-    width: 50%;
     animation:shake .1s infinite;
 }
 @keyframes shake {
@@ -26,7 +26,8 @@ h1 {
 }
 p {
     color: white;
-    font-size: 20px;
+    font-size: 40px;
+    font-weight: bold;
 }
 .context {
     color: white;
