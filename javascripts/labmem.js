@@ -76,17 +76,17 @@ function setIntro(name) {
  */
 var datas = {
   okabe: {
-    fullname: "岡部倫太郎",
+    fullname: "岡部 倫太郎",
     desc: "現在Javaに一生懸命勉強しています。牧瀬紅莉栖のために。",
     img: ["o1.jpg", "o2.jpg"]
   },
   hiyajo: {
-    fullname: "比屋定真帆",
+    fullname: "比屋定 真帆",
     desc: "JavaScriptを研究しています、でもこれだけじゃなくて他のLanguageも段々上手になります。現在岡部と一緒に仕事中です。",
     img: ["h1.jpg", "h2.jpg"]
   },
   makise: {
-    fullname: "牧濑红莉栖",
+    fullname: "牧濑 红莉栖",
     desc: "今　岡部のそばにいない　どこへ行くかな？",
     img: ["m1.jpg", "m2.jpg"]
   }
