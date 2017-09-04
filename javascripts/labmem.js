@@ -79,7 +79,7 @@ function setIntro(name) {
     if (imgNo >= data.img.length) {
       imgNo = 0;
     }
-    $(".people").transition("fade left", function() {
+    $(".people").transition("fade right", function() {
       $(".people").attr({
         src: "images/" + data.img[imgNo]
       });
