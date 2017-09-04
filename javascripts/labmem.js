@@ -2,7 +2,7 @@
  * 全局变量
  */
 var peopleInt = 0; // 间隔索引
-var imgNo = 1; // 轮播图片索引
+var imgNo = 0; // 轮播图片索引
 
 /**
  * 页面加载完毕后执行
@@ -22,6 +22,9 @@ $(".mem").transition({
 function closed() {
   $(".intro").css({
     opacity: 0
+  });
+  $(".people").attr({
+    src: "/"
   });
   setTimeout(function() {
     $(".intro").css({
@@ -58,12 +61,13 @@ function opened(name) {
       duration: ".5s"
     });
   }, 300);
-  setTimeout(function() {
-    $(".people").transition({
-      animation: "fade left",
-      duration: "1s"
-    });
-  }, 500);
+
+  // setTimeout(function() {
+  //   $(".people").transition({
+  //     animation: "fade left",
+  //     duration: "1s"
+  //   });
+  // }, 500);
 }
 
 /**
@@ -74,8 +78,8 @@ function setIntro(name) {
   var data = datas[name];
   $(".fullname").html(data.fullname);
   $(".desc").html(data.desc);
-  $(".people").attr("src", "images/" + data.img[0]);
-  peopleInt = setInterval(function() {
+  // $(".people").attr("src", "images/" + data.img[0]);
+  function change() {
     if (imgNo >= data.img.length) {
       imgNo = 0;
     }
@@ -86,7 +90,18 @@ function setIntro(name) {
       imgNo++;
     });
     $(".people").transition("fade left");
-  }, 4000);
+  }
+  $(".people").attr({
+    src: "images/" + data.img[imgNo]
+  });
+  imgNo++;
+  $(".people").transition(
+    {
+      animation: "fade left",
+      duration: ".5s"
+    }
+  );
+  peopleInt = setInterval(change, 4000);
 }
 
 /**
