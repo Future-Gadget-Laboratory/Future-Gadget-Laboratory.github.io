@@ -28,10 +28,11 @@ function closed() {
       visibility: "hidden"
     });
   }, 500);
-  window.clearInterval(peopleInt);
+  peopleInt = window.clearInterval(peopleInt);
   $(".people").transition("fade left");
   $(".fullname").transition("fade right");
   $(".desc").transition("fade right");
+  imgNo = 1;
 }
 
 /**
