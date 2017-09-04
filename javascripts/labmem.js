@@ -84,15 +84,15 @@ function setIntro(name) {
       imgNo = 0;
     }
     $(".people").transition("fade right", function() {
-      $(".people").attr({
-        src: "images/" + data.img[imgNo]
+      $(".people").css({
+        "background-image": "url('images/" + data.img[imgNo] + "')"
       });
       imgNo++;
     });
     $(".people").transition("fade left");
   }
-  $(".people").attr({
-    src: "images/" + data.img[imgNo]
+  $(".people").css({
+    "background-image": "url('images/" + data.img[imgNo] + "')"
   });
   imgNo++;
   $(".people").transition(
