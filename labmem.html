@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ラボラトリー - 未来ガジェット研究所</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
+    <link rel="stylesheet" href="stylesheets/fgl.css">
+    <link rel="stylesheet" href="stylesheets/labmem.css">
+</head>
+
+<body>
+    <section>
+        <nav class="ui inverted pointing menu">
+            <div id="menu" class="ui container"></div>
+        </nav>
+        <div class="intro">
+            <img class="people">
+            <span class="closeIcon" onclick="closed();"><i class="huge window close outline icon"></i></span>
+            <div class="ui container">
+                <p class="fullname"></p>
+                <p class="desc"></p>
+            </div>
+            
+        </div>
+        <div class="labmem">
+            <div class="ui three column grid container">
+                <div class="row">
+                    <div class="column">
+                        <img class="mem" src="images/okabe.png" onclick="opened('okabe');" alt="岡部倫太郎">
+                    </div>
+                    <div class="column">
+                        <img class="mem" src="images/hiyajo.png" onclick="opened('hiyajo');" alt="比屋定真帆">
+                    </div>
+                    <div class="column">
+                        <img class="mem" src="images/makise.png" onclick="opened('makise');" alt="牧瀬红莉栖">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui active dimmer">
+            <div class="ui loader"></div>
+        </div>
+    </section>
+
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+<script src="javascripts/fgl.js"></script>
+<script src="javascripts/labmem.js"></script>
+
+</html>

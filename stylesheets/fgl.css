@@ -3,4 +3,16 @@ body {
 }
 nav {
     position: relative;
+    z-index: 9999;
+}
+sup {
+    color: red;
+}
+section {
+    /* margin-top: -60px; */
+    background-size: cover;
+    transition: background-image 1s;
+    transition-timing-function: ease;
+    height: 100%;
+    overflow:hidden;
 }

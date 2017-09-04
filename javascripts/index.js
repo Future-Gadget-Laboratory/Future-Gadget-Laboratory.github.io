@@ -1,4 +1,5 @@
 $(function () {
+    $('.ui.active.dimmer').removeClass('active');
     $('#home').addClass('active');
 
     for (let i = 0; i < 2; i++) {
@@ -11,14 +12,3 @@ $(function () {
         }, i * 1000);
     }
 });
-var bg = 1;
-var bgCount = 2;
-$('section').css('background-image', "url('images/b0.jpg')");
-setInterval(function() {
-    $('section').css('background-image', "url('images/b" + bg + ".jpg')");
-    if (bg == bgCount - 1) {
-        bg = 0;
-    } else {
-        bg++;
-    }
-}, 5000);

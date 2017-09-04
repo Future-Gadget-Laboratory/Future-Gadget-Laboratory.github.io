@@ -1,11 +1,3 @@
-section {
-    /* margin-top: -60px; */
-    background-size: cover;
-    transition: background-image 1s;
-    transition-timing-function: ease;
-    height: 100%;
-    overflow:hidden;
-}
 img {
     position: relative;
     margin-top: 200px;

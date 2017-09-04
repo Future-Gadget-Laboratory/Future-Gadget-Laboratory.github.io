@@ -1,0 +1,58 @@
+.labmem {
+    padding-top: 50px;
+}
+.mem {
+    transition: opacity 0.2s;
+    max-height: 1200px;
+}
+.mem:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.people {
+    float: right;
+    margin-right: 300px;
+    visibility: hidden;
+    max-width: 100%;
+}
+.intro {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin-top: -60px;
+    padding: 100px;
+    background-color: white;
+    z-index: 10;
+    transition: opacity .5s;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+.closeIcon {
+    position: absolute;
+    right: 1em;
+    margin-top: -50px;
+    cursor: pointer;
+}
+@media screen and (min-width: 840px) and (max-width: 1099px) {
+    .fullname {
+        font-size: 32px;
+    }
+    .people {
+        margin-right: 0px;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .fullname {
+        font-size: 64px;
+    }
+}
+@media screen and (max-width: 839px) {
+    .fullname {
+        font-size: 32px;
+    }
+    .people {
+        margin-right: 0;
+        max-width: 50%;
+    }
+}
