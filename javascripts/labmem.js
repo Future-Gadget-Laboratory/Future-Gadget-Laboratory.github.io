@@ -35,7 +35,7 @@ function closed() {
   $(".people").transition("fade left");
   $(".fullname").transition("fade right");
   $(".desc").transition("fade right");
-  imgNo = 1;
+  imgNo = 0;
 }
 
 /**
