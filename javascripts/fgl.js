@@ -1,3 +1,6 @@
+/**
+ * 菜单
+ */
 let menu = [
   '<a id="home" class="item" href="index.html">ホームページ</a>',
   '<a id="gadget" class="item" href="gadget.html">ガジェット<sup>new</sup></a>',
@@ -6,6 +9,9 @@ let menu = [
 ];
 $("#menu").html(menu.toString().replace(/,/g, ""));
 
+/**
+ * 设置背景轮播
+ */
 var bg = 1;
 var bgCount = 2;
 $("section").css("background-image", "url('images/b0.jpg')");

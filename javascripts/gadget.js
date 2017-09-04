@@ -14,6 +14,11 @@ $.ajax({
     docs.forEach(function(element) {
       let oldHtml = $('.ui.link.three.cards.container').html();
       $('.ui.link.three.cards.container').html(oldHtml + cardCreator(element));
+      $(".card").transition({
+        animation: "horizontal flip",
+        reverse: "auto",
+        interval: 200
+      });
     }, this);
     $(".ui.active.dimmer").removeClass("active");
   }

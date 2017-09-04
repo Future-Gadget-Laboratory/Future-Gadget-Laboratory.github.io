@@ -11,7 +11,11 @@ $(function() {
   $("#labmem").addClass("active");
   $(".ui.active.dimmer").removeClass("active");
 });
-
+$(".mem").transition({
+  animation: "scale",
+  reverse: "auto",
+  interval: 200
+});
 /**
  * 关闭人物面板
  */
@@ -26,6 +30,8 @@ function closed() {
   }, 500);
   window.clearInterval(peopleInt);
   $(".people").transition("fade left");
+  $(".fullname").transition("fade right");
+  $(".desc").transition("fade right");
 }
 
 /**
@@ -39,6 +45,18 @@ function opened(name) {
   $(".intro").css({
     opacity: 1
   });
+  setTimeout(function() {
+    $(".fullname").transition({
+      animation: "fade right",
+      duration: ".2s"
+    });
+  }, 200);
+  setTimeout(function() {
+    $(".desc").transition({
+      animation: "fade right",
+      duration: ".5s"
+    });
+  }, 300);
   setTimeout(function() {
     $(".people").transition({
       animation: "fade left",
@@ -57,7 +75,7 @@ function setIntro(name) {
   $(".desc").html(data.desc);
   $(".people").attr("src", "images/" + data.img[0]);
   peopleInt = setInterval(function() {
-    if(imgNo >= data.img.length) {
+    if (imgNo >= data.img.length) {
       imgNo = 0;
     }
     $(".people").transition("fade left", function() {
@@ -67,7 +85,6 @@ function setIntro(name) {
       imgNo++;
     });
     $(".people").transition("fade left");
-    
   }, 4000);
 }
 

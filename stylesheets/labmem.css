@@ -4,6 +4,7 @@
 .mem {
     transition: opacity 0.2s;
     max-height: 1200px;
+    visibility: hidden;
 }
 .mem:hover {
     opacity: 0.7;
@@ -33,6 +34,9 @@
     right: 1em;
     margin-top: -50px;
     cursor: pointer;
+}
+.fullname, .desc {
+    visibility: hidden;
 }
 @media screen and (min-width: 840px) and (max-width: 1099px) {
     .fullname {
