@@ -15,7 +15,7 @@ $("#menu").html(menu.toString().replace(/,/g, ""));
 var bg = 1;
 var bgCount = 2;
 $("section").css("background-image", "url('images/b0.jpg')");
-setInterval(function() {
+window.setInterval(function() {
   $("section").css("background-image", "url('images/b" + bg + ".jpg')");
   if (bg == bgCount - 1) {
     bg = 0;
