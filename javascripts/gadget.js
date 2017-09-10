@@ -8,12 +8,11 @@ $(function() {
 /**
  * 获取仓库数据
  */
-$.ajax({
-  url: "https://api.github.com/orgs/Future-Gadget-Laboratory/repos",
-  success: function(docs) {
+$.ajax("https://api.github.com/orgs/Future-Gadget-Laboratory/repos")
+  .done(function(docs) {
     docs.forEach(function(element) {
-      let oldHtml = $('.ui.link.three.cards.container').html();
-      $('.ui.link.three.cards.container').html(oldHtml + cardCreator(element));
+      let oldHtml = $(".ui.link.three.cards.container").html();
+      $(".ui.link.three.cards.container").html(oldHtml + cardCreator(element));
       $(".card").transition({
         animation: "horizontal flip",
         reverse: "auto",
@@ -21,8 +20,10 @@ $.ajax({
       });
     }, this);
     $(".ui.active.dimmer").removeClass("active");
-  }
-});
+  })
+  .fail(function(error) {
+    alert("error");
+  });
 
 /**
  * 生成卡片HtmlCode
@@ -35,16 +36,26 @@ function cardCreator(data) {
             <img src=""> \
         </div> \
         <div class="content"> \
-            <div class="header">'+ data.name +'</div> \
+            <div class="header">' +
+    data.name +
+    '</div> \
             <div class="meta"> \
-                <span>创建：'+ new Date(data.created_at).toLocaleDateString() +'</span> \
+                <span>创建：' +
+    new Date(data.created_at).toLocaleDateString() +
+    '</span> \
             </div> \
-            <div class="description">'+ data.description +'</div> \
+            <div class="description">' +
+    data.description +
+    '</div> \
         </div> \
         <div class="extra content"> \
-            <a target="_blank" href="'+ data.html_url +'" class="right floated">详情 </a> \
-            <span>最近更新：'+ new Date(data.updated_at).toLocaleDateString() +' </span> \
+            <a target="_blank" href="' +
+    data.html_url +
+    '" class="right floated">详情 </a> \
+            <span>最近更新：' +
+    new Date(data.updated_at).toLocaleDateString() +
+    " </span> \
         </div> \
-    </div>';
-    return html;
+    </div>";
+  return html;
 }
